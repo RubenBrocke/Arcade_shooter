@@ -95,7 +95,7 @@ if key_up {
 
 if key_down {
 
-    physics_apply_force(phy_position_x,phy_position_y,dx,dy)
+    physics_apply_force(phy_position_x,phy_position_y,-dx,dy)
 
 }
 //rotoate left and right

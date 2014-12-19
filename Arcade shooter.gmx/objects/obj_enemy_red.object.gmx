@@ -82,7 +82,7 @@ physics_apply_force(phy_position_x,phy_position_y,dx,dy)
 
 player_dist = point_distance(phy_position_x,phy_position_y,obj_player.phy_position_x,obj_player.phy_position_y)
 
-if player_dist &lt; 96 {
+if player_dist &lt; 128 {
 
 shoot +=1
 

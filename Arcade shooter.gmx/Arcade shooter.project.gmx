@@ -23,7 +23,9 @@
     <object>objects\obj_block</object>
     <object>objects\obj_bullet_blue</object>
     <object>objects\obj_bullet_red</object>
+    <object>objects\obj_bullet_green</object>
     <object>objects\obj_enemy_red</object>
+    <object>objects\obj_enemy_green</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>

@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health_enemy = 2000
-shoot = 0
+            <string>health_enemy_red = 2000
+shoot_red = 0
 </string>
           </argument>
         </arguments>
@@ -82,12 +82,12 @@ physics_apply_force(phy_position_x,phy_position_y,dx,dy)
 
 player_dist = point_distance(phy_position_x,phy_position_y,obj_player.phy_position_x,obj_player.phy_position_y)
 
-if player_dist &lt; 128 {
+if player_dist &lt; 196 {
 
-shoot +=1
+shoot_red +=1
 
 //create bullets 
-if shoot = 5 {
+if shoot_red = 5 {
 
     bullet = instance_create(x,y,obj_bullet_red)
     with(bullet){
@@ -97,7 +97,7 @@ if shoot = 5 {
     
     }
     
-    shoot = 0    
+    shoot_red = 0    
         
 }
 
@@ -163,7 +163,7 @@ if shoot = 5 {
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>health_enemy</string>
+            <string>health_enemy_red</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -275,7 +275,7 @@ if shoot = 5 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health_enemy -= random(100)
+            <string>health_enemy_red -= random(100)
 
 
 with(other){

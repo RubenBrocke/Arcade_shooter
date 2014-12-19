@@ -14,6 +14,8 @@
     <sprite>sprites\spr_bullet_blue</sprite>
     <sprite>sprites\spr_bullet_green</sprite>
     <sprite>sprites\spr_bullet_red</sprite>
+    <sprite>sprites\spr_enemy_yellow</sprite>
+    <sprite>sprites\spr_rocket_yellow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -26,7 +28,9 @@
     <object>objects\obj_bullet_green</object>
     <object>objects\obj_bullet_red</object>
     <object>objects\obj_enemy_green</object>
+    <object>objects\obj_enemy_yellow</object>
     <object>objects\obj_explode_red</object>
+    <object>objects\obj_bullet_yellow</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>

@@ -58,6 +58,7 @@ alarm[0] = mine_timer
         phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
     
     }
+    alarm[0] = mine_timer
 </string>
           </argument>
         </arguments>

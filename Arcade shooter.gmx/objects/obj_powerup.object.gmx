@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>powerup_time = 600
+powerupid = 1
 alarm[0] = powerup_time
 </string>
           </argument>
@@ -55,10 +56,17 @@ spawn_x = 32+random(640-32)
 spawn_y = 32+random(480-32)
 
 if powerup = 1 and !place_meeting(spawn_x,spawn_y,obj_block){
-
+    
+    if powerupid = 0{
     instance_create(spawn_x,spawn_y,obj_powerup_shoottime)
-
+    powerupid = 1
+    }
+    else
+    instance_create(spawn_x,spawn_y,obj_powerup_health)
+    powerupid=0
+    
 }
+
 alarm[0] = powerup_time
 </string>
           </argument>

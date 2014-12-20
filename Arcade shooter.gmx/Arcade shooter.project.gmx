@@ -17,6 +17,9 @@
     <sprite>sprites\spr_rocket_yellow</sprite>
     <sprite>sprites\spr_enemy_purple</sprite>
     <sprite>sprites\spr_bullet_purple</sprite>
+    <sprite>sprites\spr_enemy_orange</sprite>
+    <sprite>sprites\spr_mine_orange</sprite>
+    <sprite>sprites\spr_mine_bullet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -26,18 +29,21 @@
     <object>objects\obj_player</object>
     <object>objects\obj_player_2</object>
     <object>objects\obj_block</object>
-    <object>objects\obj_bullet_blue</object>
     <objects name="enemies">
       <object>objects\obj_enemy_purple</object>
+      <object>objects\obj_enemy_orange</object>
       <object>objects\obj_enemy_red</object>
       <object>objects\obj_enemy_yellow</object>
       <object>objects\obj_enemy_green</object>
     </objects>
     <objects name="bullets">
       <object>objects\obj_bullet_purple</object>
+      <object>objects\obj_mine_orange</object>
       <object>objects\obj_bullet_green</object>
       <object>objects\obj_bullet_red</object>
       <object>objects\obj_bullet_yellow</object>
+      <object>objects\obj_bullet_blue</object>
+      <object>objects\obj_bullet_orange</object>
     </objects>
   </objects>
   <rooms name="rooms">

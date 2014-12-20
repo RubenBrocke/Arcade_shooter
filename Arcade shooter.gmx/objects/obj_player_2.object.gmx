@@ -79,10 +79,10 @@ phy_fixed_rotation = true
             <string>///movement to 2 directions
 
 //set variables
-key_up = keyboard_check(vk_up) 
-key_down = keyboard_check(vk_down) 
-key_right = keyboard_check(vk_right) 
-key_left = keyboard_check(vk_left) 
+key_up = keyboard_check(ord("W"))
+key_down = keyboard_check(ord("S"))
+key_right = keyboard_check(ord("D"))
+key_left = keyboard_check(ord("A"))
 
 dx = lengthdir_x(move_speed,phy_rotation)
 dy = lengthdir_y(move_speed,phy_rotation)
@@ -133,7 +133,7 @@ if key_left{
             <string>///shoot bullets
 
 //set variables
-key_space = keyboard_check(vk_space)
+key_space = keyboard_check(vk_lshift)
 
 //add shoot counter
 if key_space {
@@ -358,6 +358,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>draw_healthbar(60,480-40,640-60,480-52,player_health/(5000)*100,c_black,c_blue,c_blue,0,false,true)
+draw_rectangle(300,0,340,480,false)
 </string>
           </argument>
         </arguments>

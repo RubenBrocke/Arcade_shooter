@@ -41,6 +41,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_singleplayer</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>

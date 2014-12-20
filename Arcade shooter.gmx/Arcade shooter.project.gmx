@@ -9,13 +9,14 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_enemy_green</sprite>
     <sprite>sprites\spr_enemy_red</sprite>
-    <sprite>sprites\spr_explode_red</sprite>
     <sprite>sprites\spr_block</sprite>
     <sprite>sprites\spr_bullet_blue</sprite>
     <sprite>sprites\spr_bullet_green</sprite>
     <sprite>sprites\spr_bullet_red</sprite>
     <sprite>sprites\spr_enemy_yellow</sprite>
     <sprite>sprites\spr_rocket_yellow</sprite>
+    <sprite>sprites\spr_enemy_purple</sprite>
+    <sprite>sprites\spr_bullet_purple</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -25,12 +26,18 @@
     <object>objects\obj_player</object>
     <object>objects\obj_block</object>
     <object>objects\obj_bullet_blue</object>
-    <object>objects\obj_bullet_green</object>
-    <object>objects\obj_bullet_red</object>
-    <object>objects\obj_enemy_green</object>
-    <object>objects\obj_enemy_yellow</object>
-    <object>objects\obj_explode_red</object>
-    <object>objects\obj_bullet_yellow</object>
+    <objects name="enemies">
+      <object>objects\obj_enemy_purple</object>
+      <object>objects\obj_enemy_red</object>
+      <object>objects\obj_enemy_yellow</object>
+      <object>objects\obj_enemy_green</object>
+    </objects>
+    <objects name="bullets">
+      <object>objects\obj_bullet_purple</object>
+      <object>objects\obj_bullet_green</object>
+      <object>objects\obj_bullet_red</object>
+      <object>objects\obj_bullet_yellow</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>

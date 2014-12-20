@@ -25,40 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health_enemy_red = 2000
-shoot_red = 0
-mine_timer = 300
-alarm[0] = mine_timer
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>  mine = instance_create(x,y,obj_mine_red)
-    with(bullet){
-    
-        physics_apply_impulse(x,y,other.dx/10,other.dy/10)
-        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
-    
-    }
-    alarm[0] = mine_timer
+            <string>health_enemy_red = 250 
+explode_red = 0
 </string>
           </argument>
         </arguments>
@@ -84,57 +52,12 @@ alarm[0] = mine_timer
             <string>///movement
 player_dir = point_direction(phy_position_x,phy_position_y,obj_player.phy_position_x,obj_player.phy_position_y)
 
-dx = lengthdir_x(10,player_dir)
-dy = lengthdir_y(10,player_dir)
+dx = lengthdir_x(5,player_dir)
+dy = lengthdir_y(5,player_dir)
 
 physics_apply_force(phy_position_x,phy_position_y,dx,dy)
 
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///shooting
-
-player_dist = point_distance(phy_position_x,phy_position_y,obj_player.phy_position_x,obj_player.phy_position_y)
-
-if player_dist &lt; 196 {
-
-shoot_red +=1
-
-//create bullets 
-if shoot_red = 5 {
-
-    bullet = instance_create(x,y,obj_bullet_red)
-    with(bullet){
-    
-        physics_apply_impulse(x,y,other.dx,other.dy)
-        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
-    
-    }
-    
-    shoot_red = 0    
-        
-}
-
-
-}
 </string>
           </argument>
         </arguments>
@@ -155,7 +78,7 @@ if shoot_red = 5 {
         <arguments>
           <argument>
             <kind>4</kind>
-            <string>4</string>
+            <string>8</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -167,7 +90,7 @@ if shoot_red = 5 {
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
           <argument>
             <kind>13</kind>
@@ -176,6 +99,261 @@ if shoot_red = 5 {
           <argument>
             <kind>4</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///explosion
+
+player_dist = point_distance(phy_position_x,phy_position_y,obj_player.phy_position_x,obj_player.phy_position_y)
+
+dx_45 = lengthdir_x(10,player_dir+45)
+dy_45 = lengthdir_y(10,player_dir+45)
+dx_60 = lengthdir_x(10,player_dir+60)
+dy_60 = lengthdir_y(10,player_dir+60)
+dx_75 = lengthdir_x(10,player_dir+75)
+dy_75 = lengthdir_y(10,player_dir+75)
+dx_90 = lengthdir_x(10,player_dir+90)
+dy_90 = lengthdir_y(10,player_dir+90)
+dx_105 = lengthdir_x(10,player_dir+105)
+dy_105 = lengthdir_y(10,player_dir+105)
+dx_120 = lengthdir_x(10,player_dir+120)
+dy_120 = lengthdir_y(10,player_dir+120)
+dx_135 = lengthdir_x(10,player_dir+135)
+dy_135 = lengthdir_y(10,player_dir+135)
+dx_150 = lengthdir_x(10,player_dir+150)
+dy_150 = lengthdir_y(10,player_dir+150)
+dx_165 = lengthdir_x(10,player_dir+165)
+dy_165 = lengthdir_y(10,player_dir+165)
+dx_180 = lengthdir_x(10,player_dir+180)
+dy_180 = lengthdir_y(10,player_dir+180)
+dx_195 = lengthdir_x(10,player_dir+195)
+dy_195 = lengthdir_y(10,player_dir+195)
+dx_210 = lengthdir_x(10,player_dir+210)
+dy_210 = lengthdir_y(10,player_dir+210)
+dx_225 = lengthdir_x(10,player_dir+225)
+dy_225 = lengthdir_y(10,player_dir+225)
+dx_240 = lengthdir_x(10,player_dir+240)
+dy_240 = lengthdir_y(10,player_dir+240)
+dx_255 = lengthdir_x(10,player_dir+255)
+dy_255 = lengthdir_y(10,player_dir+255)
+dx_270 = lengthdir_x(10,player_dir+270)
+dy_270 = lengthdir_y(10,player_dir+270)
+dx_285 = lengthdir_x(10,player_dir+285)
+dy_285 = lengthdir_y(10,player_dir+285)
+dx_300 = lengthdir_x(10,player_dir+300)
+dy_300 = lengthdir_y(10,player_dir+300)
+dx_315 = lengthdir_x(10,player_dir+315)
+dy_315 = lengthdir_y(10,player_dir+315)
+dx_330 = lengthdir_x(10,player_dir+330)
+dy_330 = lengthdir_y(10,player_dir+330)
+dx_345 = lengthdir_x(10,player_dir+345)
+dy_345 = lengthdir_y(10,player_dir+345)
+dx_0 = lengthdir_x(10,player_dir+0)
+dy_0 = lengthdir_y(10,player_dir+0)
+dx_15 = lengthdir_x(10,player_dir+15)
+dy_15 = lengthdir_y(10,player_dir+15)
+dx_30 = lengthdir_x(10,player_dir+30)
+dy_30 = lengthdir_y(10,player_dir+30)
+
+if player_dist &lt; 1028 {
+
+explode_red +=1
+
+//create bullets 
+if explode_red = 50 {
+
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_0,other.dy_0)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_15,other.dy_15)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_30,other.dy_30)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_45,other.dy_45)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_60,other.dy_60)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_75,other.dy_75)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_90,other.dy_90)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_105,other.dy_105)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_120,other.dy_120)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_135,other.dy_135)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_150,other.dy_150)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_165,other.dy_165)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_180,other.dy_180)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_195,other.dy_195)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_210,other.dy_210)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_225,other.dy_225)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_270,other.dy_270)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_285,other.dy_285)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_300,other.dy_300)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_315,other.dy_315)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_330,other.dy_330)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_345,other.dy_345)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_240,other.dy_240)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+    bullet = instance_create(x,y,obj_bullet_red)
+    with(bullet){
+    
+        physics_apply_impulse(x,y,other.dx_255,other.dy_255)
+        phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
+    
+    }
+
+    effect_create_below(ef_ring,x,y,1,c_red)    
+    explode_red = 0
+}
+
+
+}
+</string>
           </argument>
         </arguments>
       </action>

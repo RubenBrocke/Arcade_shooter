@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health_enemy_green = 500
-shoot_green = 0
+            <string>health_enemy_yellow = 500
+shoot_yellow = 0
 phy_fixed_rotation = true
 </string>
           </argument>
@@ -85,10 +85,10 @@ player_dist = point_distance(phy_position_x,phy_position_y,obj_player.phy_positi
 
 if player_dist &lt; 198 {
 
-shoot_green +=1
+shoot_yellow +=1
 
 //create bullets 
-if shoot_green = 15 {
+if shoot_yellow = 15 {
 
     bullet = instance_create(x,y,obj_bullet_yellow)
     with(bullet){
@@ -98,7 +98,7 @@ if shoot_green = 15 {
     
 }
     
-    shoot_green = 0    
+    shoot_yellow = 0    
         
 }
 
@@ -164,7 +164,7 @@ if shoot_green = 15 {
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>health_enemy_green</string>
+            <string>health_enemy_yellow</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -276,7 +276,7 @@ if shoot_green = 15 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health_enemy_green -= random(100)
+            <string>health_enemy_yellow -= random(100)
 
 
 with(other){

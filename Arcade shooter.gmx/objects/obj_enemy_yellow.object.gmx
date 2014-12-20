@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>health_enemy_yellow = 500
-shoot_yellow = 0
+shoot_yellow = random(2)
 phy_fixed_rotation = true
 </string>
           </argument>

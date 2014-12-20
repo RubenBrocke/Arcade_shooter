@@ -176,7 +176,7 @@ if player_dist &lt; 1028 {
 explode_red +=1
 
 //create bullets 
-if explode_red = 50 {
+if explode_red = 60 {
 
     bullet = instance_create(x,y,obj_bullet_red)
     with(bullet){

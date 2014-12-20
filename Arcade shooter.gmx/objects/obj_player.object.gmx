@@ -31,6 +31,7 @@ move_speed = 10
 shoot = 0
 player_health = 5000
 sound_global_volume(1)
+shoot_timer = 5
 </string>
           </argument>
         </arguments>
@@ -54,6 +55,29 @@ sound_global_volume(1)
             <string>///set other variables
 
 phy_fixed_rotation = true
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>shoot_timer = 5
 </string>
           </argument>
         </arguments>
@@ -110,6 +134,9 @@ if key_left{
     phy_rotation -= 7.2
 
 }
+
+
+
 </string>
           </argument>
         </arguments>
@@ -141,7 +168,7 @@ shoot +=1
 }
 
 //create bullets 
-if shoot = 5 {
+if shoot = shoot_timer {
 
     bullet = instance_create(x,y,obj_bullet_blue)
     with(bullet){

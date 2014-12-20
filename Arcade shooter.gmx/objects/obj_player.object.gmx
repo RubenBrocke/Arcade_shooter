@@ -30,7 +30,7 @@
 move_speed = 10
 shoot = 0
 player_health = 5000
-
+sound_global_volume(1)
 </string>
           </argument>
         </arguments>
@@ -150,7 +150,7 @@ if shoot = 5 {
         phy_rotation = -point_direction(phy_position_x,phy_position_y,other.phy_position_x,other.phy_position_y)
     
     }
-    
+    sound_play(sd_shoot)
     shoot = 0    
         
 }
@@ -197,6 +197,33 @@ if shoot = 5 {
           <argument>
             <kind>4</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///killed
+
+if player_health &lt;= 0 {
+
+room_restart()
+
+}
+</string>
           </argument>
         </arguments>
       </action>

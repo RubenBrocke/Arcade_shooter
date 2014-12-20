@@ -51,8 +51,8 @@ alarm[0] = powerup_time
             <kind>1</kind>
             <string>powerup = 1
 
-spawn_x = 32+irandom(640-32)
-spawn_y = 32+irandom(480-32)
+spawn_x = 32+random(640-32)
+spawn_y = 32+random(480-32)
 
 if powerup = 1 and !place_meeting(spawn_x,spawn_y,obj_block){
 

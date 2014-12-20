@@ -135,6 +135,7 @@ if key_left{
 
 }
 
+show_debug_message(shoot)
 
 
 </string>

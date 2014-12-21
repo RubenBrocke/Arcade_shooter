@@ -73,6 +73,7 @@
     <instance objName="obj_block" x="448" y="64" name="inst_F0FE385C" locked="0" code="" scaleX="4" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="448" y="480" name="inst_09856536" locked="0" code="" scaleX="4" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="288" y="448" name="inst_61EF76FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_red" x="800" y="224" name="inst_74CFE094" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_tileset" x="0" y="32" w="32" h="32" xo="0" yo="32" id="10000001" name="inst_F508FF7B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

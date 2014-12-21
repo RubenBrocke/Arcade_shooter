@@ -40,6 +40,9 @@
     <background>background\bg_tileset</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fnt_default</font>
+  </fonts>
   <objects name="objects">
     <objects name="Player">
       <object>objects\obj_player</object>
@@ -74,7 +77,10 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_singleplayer</room>
+    <room>rooms\rm_s1</room>
+    <room>rooms\rm_s2</room>
+    <room>rooms\rm_s3</room>
+    <room>rooms\rm_s4</room>
     <room>rooms\rm_test</room>
   </rooms>
   <constants number="2">

@@ -32,6 +32,7 @@ shoot = 0
 player_health = 5000
 sound_global_volume(1)
 shoot_timer = 5
+transition_kind = 21
 </string>
           </argument>
         </arguments>
@@ -247,12 +248,19 @@ if shoot = shoot_timer {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///killed
+            <string>///killed / winnng
 
 if player_health &lt;= 0 {
 
 room_restart()
 
+}
+if instance_number(obj_enemy_purple) = 0 and
+instance_number(obj_enemy_orange) = 0 and
+instance_number(obj_enemy_green) = 0 and
+instance_number(obj_enemy_red) = 0 and
+instance_number(obj_enemy_yellow) = 0{
+room_goto_next()
 }
 </string>
           </argument>

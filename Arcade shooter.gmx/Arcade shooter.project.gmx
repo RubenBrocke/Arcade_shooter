@@ -9,30 +9,35 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_enemy_green</sprite>
-    <sprite>sprites\spr_enemy_red</sprite>
-    <sprite>sprites\spr_block</sprite>
-    <sprite>sprites\spr_ramp1</sprite>
-    <sprite>sprites\spr_ramp2</sprite>
-    <sprite>sprites\spr_ramp3</sprite>
-    <sprite>sprites\spr_ramp4</sprite>
+    <sprites name="Enemy's">
+      <sprite>sprites\spr_enemy_red</sprite>
+      <sprite>sprites\spr_enemy_green</sprite>
+      <sprite>sprites\spr_enemy_purple</sprite>
+      <sprite>sprites\spr_enemy_orange</sprite>
+      <sprite>sprites\spr_enemy_yellow</sprite>
+    </sprites>
+    <sprites name="System">
+      <sprite>sprites\spr_block</sprite>
+    </sprites>
     <sprite>sprites\spr_bullet_blue</sprite>
-    <sprite>sprites\spr_bullet_green</sprite>
-    <sprite>sprites\spr_bullet_red</sprite>
-    <sprite>sprites\spr_enemy_yellow</sprite>
-    <sprite>sprites\spr_rocket_yellow</sprite>
-    <sprite>sprites\spr_enemy_purple</sprite>
-    <sprite>sprites\spr_bullet_purple</sprite>
-    <sprite>sprites\spr_enemy_orange</sprite>
-    <sprite>sprites\spr_mine_orange</sprite>
-    <sprite>sprites\spr_mine_bullet</sprite>
-    <sprite>sprites\spr_powerup_shoottime</sprite>
-    <sprite>sprites\spr_powerup_health</sprite>
+    <sprites name="Bullets">
+      <sprite>sprites\spr_bullet_green</sprite>
+      <sprite>sprites\spr_bullet_red</sprite>
+      <sprite>sprites\spr_rocket_yellow</sprite>
+      <sprite>sprites\spr_mine_orange</sprite>
+      <sprite>sprites\spr_bullet_purple</sprite>
+      <sprite>sprites\spr_mine_bullet</sprite>
+    </sprites>
+    <sprites name="Powerup">
+      <sprite>sprites\spr_powerup_shoottime</sprite>
+      <sprite>sprites\spr_powerup_health</sprite>
+    </sprites>
     <sprite>sprites\spr_button_singleplayer</sprite>
     <sprite>sprites\spr_button_multiplayer</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\bg_tileset</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -42,10 +47,6 @@
     </objects>
     <objects name="System">
       <object>objects\obj_block</object>
-      <object>objects\obj_ramp1</object>
-      <object>objects\obj_ramp2</object>
-      <object>objects\obj_ramp3</object>
-      <object>objects\obj_ramp4</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy_purple</object>

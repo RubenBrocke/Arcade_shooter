@@ -3,6 +3,7 @@
   <name>MoolBoran</name>
   <size>48</size>
   <bold>0</bold>
+  <renderhq>0</renderhq>
   <italic>0</italic>
   <charset>1</charset>
   <aa>3</aa>
@@ -21,10 +22,10 @@
     <glyph character="108" x="451" y="166" w="5" h="44" shift="12" offset="3"/>
     <glyph character="61" x="421" y="120" w="20" h="38" shift="22" offset="1"/>
     <glyph character="77" x="115" y="2" w="36" h="44" shift="39" offset="2"/>
+    <glyph character="122" x="300" y="120" w="19" h="44" shift="19" offset="0"/>
     <glyph character="56" x="401" y="120" w="18" h="44" shift="22" offset="2"/>
     <glyph character="35" x="248" y="61" w="23" h="44" shift="25" offset="1"/>
     <glyph character="115" x="44" y="166" w="16" h="44" shift="17" offset="0"/>
-    <glyph character="122" x="300" y="120" w="19" h="44" shift="19" offset="0"/>
     <glyph character="105" x="431" y="166" w="6" h="44" shift="12" offset="2"/>
     <glyph character="47" x="343" y="61" w="19" h="49" shift="17" offset="-1"/>
     <glyph character="80" x="279" y="120" w="19" h="44" shift="23" offset="3"/>
@@ -33,12 +34,12 @@
     <glyph character="48" x="431" y="61" w="20" h="44" shift="22" offset="1"/>
     <glyph character="32" x="98" y="166" w="8" h="86" shift="8" offset="0"/>
     <glyph character="91" x="338" y="166" w="9" h="51" shift="15" offset="4"/>
-    <glyph character="57" x="258" y="120" w="19" h="44" shift="22" offset="1"/>
-    <glyph character="79" x="304" y="2" w="28" h="44" shift="32" offset="2"/>
-    <glyph character="97" x="453" y="61" w="20" h="44" shift="21" offset="2"/>
-    <glyph character="98" x="216" y="120" w="19" h="44" shift="23" offset="3"/>
-    <glyph character="107" x="195" y="120" w="19" h="44" shift="23" offset="3"/>
     <glyph character="114" x="282" y="166" w="12" h="44" shift="15" offset="3"/>
+    <glyph character="57" x="258" y="120" w="19" h="44" shift="22" offset="1"/>
+    <glyph character="98" x="216" y="120" w="19" h="44" shift="23" offset="3"/>
+    <glyph character="79" x="304" y="2" w="28" h="44" shift="32" offset="2"/>
+    <glyph character="107" x="195" y="120" w="19" h="44" shift="23" offset="3"/>
+    <glyph character="97" x="453" y="61" w="20" h="44" shift="21" offset="2"/>
     <glyph character="46" x="404" y="166" w="8" h="45" shift="11" offset="1"/>
     <glyph character="38" x="274" y="2" w="28" h="44" shift="28" offset="1"/>
     <glyph character="100" x="341" y="120" w="18" h="44" shift="23" offset="2"/>

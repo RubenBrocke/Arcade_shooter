@@ -33,6 +33,7 @@ player_health = 5000
 shoot_timer = 5
 varsound = 0
 transition_kind = 21
+
 </string>
           </argument>
         </arguments>
@@ -183,23 +184,10 @@ if shoot = shoot_timer {
     
     }
     audio_master_gain(0.1)
-    varsound = (choose(1,2,3,4,5,6,7,8,9,10,11,12))
-    if varsound = 1 {audio_play_sound(sd_shoot01, 10, false)};
-    if varsound = 2 {audio_play_sound(sd_shoot02, 10, false)};
-    if varsound = 3 {audio_play_sound(sd_shoot03, 10, false)};
-    if varsound = 4 {audio_play_sound(sd_shoot04, 10, false)};
-    if varsound = 5 {audio_play_sound(sd_shoot05, 10, false)};
-    if varsound = 6 {audio_play_sound(sd_shoot06, 10, false)};
-    if varsound = 7 {audio_play_sound(sd_shoot07, 10, false)};
-    if varsound = 8 {audio_play_sound(sd_shoot08, 10, false)};
-    if varsound = 9 {audio_play_sound(sd_shoot09, 10, false)};
-    if varsound = 10 {audio_play_sound(sd_shoot10, 10, false)};
-    if varsound = 11 {audio_play_sound(sd_shoot11, 10, false)};
-    if varsound = 12 {audio_play_sound(sd_shoot12, 10, false)};
-    if varsound = 13 {audio_play_sound(sd_shoot13, 10, false)};
-    if varsound = 14 {audio_play_sound(sd_shoot14, 10, false)};
-    if varsound = 15 {audio_play_sound(sd_shoot15, 10, false)};
-    if varsound = 16 {audio_play_sound(sd_shoot16, 10, false)};
+    varsound = (choose(1))
+    if varsound = 1 { audio_play_sound(sd_shoot01, 10, false)};
+ 
+   
     shoot = 0    
         
 }
@@ -272,13 +260,7 @@ if player_health &lt;= 0 {
 room_restart()
 
 }
-if instance_number(obj_enemy_purple) = 0 and
-instance_number(obj_enemy_orange) = 0 and
-instance_number(obj_enemy_green) = 0 and
-instance_number(obj_enemy_red) = 0 and
-instance_number(obj_enemy_yellow) = 0{
-room_goto_next()
-}
+
 </string>
           </argument>
         </arguments>
@@ -499,8 +481,8 @@ with(other){
             <string>/// draw healthbar and coins
 draw_healthbar(60,480-40,640-60,480-52,player_health/(5000)*100,c_black,c_blue,c_blue,0,false,true)
 draw_set_font(fnt_default)
-draw_set_color(c_yellow)
-draw_text(32, 32, "coins = " + string(global.coins))
+draw_set_color(c_black)
+draw_text(32, 32, "coins = " + string(global.crystals))
 </string>
           </argument>
         </arguments>

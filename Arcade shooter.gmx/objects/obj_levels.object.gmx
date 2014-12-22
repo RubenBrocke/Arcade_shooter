@@ -25,12 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu[0] = "Level select";
-menu[1] = "Multi Player";
-menu[2] = "Controls";
-menu[3] = "Quit";
+            <string>level[0] = "Red is easy";
+level[1] = "Double?";
+level[2] = "Keep training";
+level[3] = "Last red";
+level[4] = "Cristmas!";
 
-space = 64;
+space = 256;
 mpos = 0
 
 </string>
@@ -56,18 +57,18 @@ mpos = 0
           <argument>
             <kind>1</kind>
             <string>var move = 0;
-move -= max(keyboard_check_pressed(vk_up),keyboard_check_pressed(ord("W")),0)
-move += max(keyboard_check_pressed(vk_down),keyboard_check_pressed(ord("S")),0)
+move -= max(keyboard_check_pressed(vk_left),keyboard_check_pressed(ord("A")),0)
+move += max(keyboard_check_pressed(vk_right),keyboard_check_pressed(ord("D")),0)
 
 if move != 0 {
 
     mpos += move;
     if mpos &lt;0{
     
-        mpos = array_length_1d(menu) - 1
+        mpos = array_length_1d(level) - 1
     
     }
-    if mpos &gt; array_length_1d(menu) -1 {
+    if mpos &gt; array_length_1d(level) -1 {
     
         mpos = 0
     
@@ -81,35 +82,12 @@ push = max(keyboard_check_released(vk_enter),keyboard_check_released(ord("D")),0
 
 if push = 1 {
 
-    scr_menu()
+    scr_level()
 
 }
 
 
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>global.crystals = 0
 </string>
           </argument>
         </arguments>
@@ -138,13 +116,13 @@ draw_set_font(fnt_default)
 draw_set_color(c_white)
 
 var m;
-for(m = 0; m &lt; array_length_1d(menu); m+=1){
+for(m = 0; m &lt; array_length_1d(level); m+=1){
 
-        draw_text(x+space,y+m*space,string(menu[m]))
+        draw_text(x+m*space,y+space,string(level[m]))
 
 }
 
-draw_sprite(sprite_index,0, x+16,y+mpos * space)
+draw_sprite(sprite_index,0, x+mpos*space,y)
 </string>
           </argument>
         </arguments>

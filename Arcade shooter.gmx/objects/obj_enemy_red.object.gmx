@@ -455,11 +455,7 @@ if explode_red = 60 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// give coins
-global.coins +=1
-sound_volume(1,sd_coin)
-audio_play_sound(sd_coin, 10, false)
-
+            <string>scr_crystals(20)
 </string>
           </argument>
         </arguments>

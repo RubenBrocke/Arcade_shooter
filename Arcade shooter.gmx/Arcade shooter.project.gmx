@@ -7,21 +7,6 @@
   <sounds name="sound">
     <sounds name="shoot">
       <sound>sound\sd_shoot01</sound>
-      <sound>sound\sd_shoot02</sound>
-      <sound>sound\sd_shoot03</sound>
-      <sound>sound\sd_shoot04</sound>
-      <sound>sound\sd_shoot05</sound>
-      <sound>sound\sd_shoot06</sound>
-      <sound>sound\sd_shoot07</sound>
-      <sound>sound\sd_shoot08</sound>
-      <sound>sound\sd_shoot09</sound>
-      <sound>sound\sd_shoot10</sound>
-      <sound>sound\sd_shoot11</sound>
-      <sound>sound\sd_shoot12</sound>
-      <sound>sound\sd_shoot13</sound>
-      <sound>sound\sd_shoot14</sound>
-      <sound>sound\sd_shoot15</sound>
-      <sound>sound\sd_shoot16</sound>
     </sounds>
     <sound>sound\sd_coin</sound>
   </sounds>
@@ -53,6 +38,7 @@
     <sprite>sprites\spr_button_singleplayer</sprite>
     <sprite>sprites\spr_button_multiplayer</sprite>
     <sprite>sprites\spr_arrow</sprite>
+    <sprite>sprites\spr_crystal</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -61,6 +47,8 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_level.gml</script>
+    <script>scripts\scr_crystals.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -95,9 +83,12 @@
       <object>objects\obj_powerup_health</object>
     </objects>
     <object>objects\obj_menu</object>
+    <object>objects\obj_levels</object>
+    <object>objects\obj_crystal</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_levelselect</room>
     <room>rooms\rm_s1</room>
     <room>rooms\rm_s2</room>
     <room>rooms\rm_s3</room>

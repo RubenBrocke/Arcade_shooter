@@ -246,10 +246,7 @@ if shoot_purple = 15 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// give coins
-global.coins +=1
-audio_play_sound(sd_coin, 10, false)
-
+            <string>scr_crystals(50)
 </string>
           </argument>
         </arguments>

@@ -237,10 +237,7 @@ physics_apply_force(phy_position_x,phy_position_y,dx,dy)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// give coins
-global.coins +=1
-audio_play_sound(sd_coin, 10, false)
-
+            <string>scr_crystals(20)
 </string>
           </argument>
         </arguments>
